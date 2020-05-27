@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Blog;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
-use App\Category;
 use App\Tag;
+use App\Category;
+
 
 class PostsController extends Controller
 {
@@ -15,10 +16,19 @@ class PostsController extends Controller
     }
 
     public function category(Category $category) {
-        return view('blog.category')->with('category', $category)->with('posts', $category->posts()->paginate(3));
+
+        return view('blog.category')
+        ->with('category', $category)
+        ->with('posts', $category->post()->searched()->simplePaginate())
+        ->with('categories', Category::all())
+        ->with('tags', Tag::all());
     }
 
     public function tag(Tag $tag) {
-        return view('blog.tag')->with('tag', $tag)->with('posts', $tag->posts()->paginate(3));
+        return view('blog.tag')
+        ->with('tag', $tag)
+        ->with('categories', Category::all())
+        ->with('tags', Tag::all())
+        ->with('posts', $tag->post()->searched()->simplePaginate());
     }
 }

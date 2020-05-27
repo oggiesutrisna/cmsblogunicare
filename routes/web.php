@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('blog/posts/{post}', [PostsController::class, 'show'])->name('blog.show');
 Route::get('blog/categories/{category}', [PostsController::class, 'category'])->name('blog.category');
-Route::get('blog/tags/{tag}', [PostsController::class, 'tag'])->name('blog.category');
+Route::get('blog/tag/{tag}', [PostsController::class, 'tag'])->name('blog.tag');
 
 Auth::routes();
 
@@ -29,7 +29,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('trashed-posts','PostsController@trashed')->name('trashed-posts.index');
     Route::put('restore-post/{post}', 'PostsController@restore')->name('restore-posts');
 });
-
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('users/profile', 'UserController@edit')->name('users.edit-profile');

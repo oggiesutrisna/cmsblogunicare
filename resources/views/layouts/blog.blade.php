@@ -85,6 +85,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/page.min.js')}}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ecdbefd43f2f128"></script>
 
   </body>
 </html>
