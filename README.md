@@ -1,3 +1,8 @@
-I create some Content Management System for our website called unicare.id
+Konsep CMS sederhana yang dirangkum menjadi satu dan juga bisa diselesaikan dengan baik dan unch unch sekali. 
 
-Before this, the unicare.id created in wordpress, which is sucks. and then i decide to create the cms with myself, using laravel. 
+Dalam wikipedia dijelaskan CMS adalah singkatan dari Content Management System atau dalam Bahasa Indonesianya Sistem Manajemen Konten merupakan perangkat lunak yang memungkinkan seseorang untuk menambahkan dan/atau memanipulasi (mengubah) isi dari suatu situs web.
+
+Kalian bisa gunakan git clone project ini untuk bereksperimen. Hehe 
+
+Regards. 
+Oggie Sutrisna.-
